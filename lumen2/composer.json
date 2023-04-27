@@ -1,0 +1,5 @@
+{
+    "require": {
+        "momon/momon": "1.0.*"
+    }
+}
