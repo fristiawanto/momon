@@ -61,7 +61,7 @@
             
         </div>
         <div class="right-area">
-            <DetailTransaksi />
+            <detailPengeluaran />
         </div>
     </div>
 </template>
@@ -72,7 +72,7 @@ import RecordRow from '@/components/RecordRow.vue'
 import CardRekening from '@/components/CardRekening.vue'
 import PersentasePengeluaran from '@/components/PersentasePengeluaran.vue'
 import BuatTransaksi from '@/components/BuatTransaksi.vue'
-import DetailTransaksi from '../components/DetailTransaksi.vue'
+import detailPengeluaran from '../components/detailPengeluaran.vue'
 export default {
     name: "DashboardView",
     components: {
@@ -81,7 +81,7 @@ export default {
     CardRekening,
     PersentasePengeluaran,
     BuatTransaksi,
-    DetailTransaksi,
+    detailPengeluaran,
 }
 }
 

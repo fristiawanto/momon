@@ -1,31 +1,54 @@
 <template>
+    
     <div class="mon-create-transaction" id="Pemasukan">
-    <div class="create-transaction-header fixed-header">
-        <h2>Buat Transaksi</h2>
-        <div class="mon-space-between">
-            <button class="button-chip area-grow">Pendapatan</button>
-            <button class="button-chip area-grow">Pengeluaran</button>
-            <button class="button-chip area-grow">Transafer</button>
+    
+    <div class="fixed-header">
+        <!-- HEADER -->
+        <div class="create-transaction-header">
+        <h3>Buat Transaksi</h3>
+        </div>
+
+        <!-- NAVIGATION -->
+        <div class="mobile-navigation">
+            <div class="mon-space-between">
+                <button class="button-chip area-grow">Pendapatan</button>
+                <button class="button-chip area-grow">Pengeluaran</button>
+                <button class="button-chip area-grow">Transafer</button>
+            </div>
         </div>
     </div>
-    <input type="number" class="transaction-value-input" placeholder="masukkan angka disini" pattern="(d{3})">
+    
+    
+    <!-- INPUT NUMBER -->
+    <div class="create-transaction-div">
+        <input class="create-transaction-input" type="number" placeholder="0" pattern="(d{3})">
+    </div>
+
+    <!-- TRANSACTION DETAILS -->
     <div class="create-transaction-details">
         <div class="select-rekening">
-            <h4>Rekening</h4>
+            <a class="card-title">Pilih Rekening</a>
             <div class="mon-space-between">
-                <a class="area-grow">Tunai</a>
+                <div class="rekening-id area-grow">
+                    <div class="icon-rekening-small" :style= "{'background-color': colorLibrary.teal}">
+                        <img src="@/assets/icon/rekening/card.svg">
+                    </div>
+                    <a>Tunai</a>
+                </div>
                 <img class="icon" src="@/assets/icon/right.svg">
             </div>
         </div>
         <div class="select-category">
-            <h4>Kategori</h4>
-            <div class="mon-space-between">
-                <img class="icon" src="@/assets/icon/tugas.svg">
-                <a class="area-grow">Keperluan Pendidikan</a>
-                <img class="icon" src="@/assets/icon/right.svg">
+            <div class="category-id-wrapper">
+                <a class="card-title">Kategori</a>
+                <div class="category-id">
+                    <img class="category-icon-small" src="@/assets/icon/tugas.svg">
+                    <a>Keperluan Pendidikan</a>
+                </div>
             </div>
+            <img class="icon" src="@/assets/icon/right.svg">
         </div>
-        <h3>Detail</h3>
+        <a>Detail</a>
         <form class="transaction-detail-form">
             <div class="mon-rowinput">
                 <img class="input-icon" src="@/assets/icon/teks.svg">
@@ -53,3 +76,15 @@
     </div>
 </div>
 </template>
+
+
+<script>
+import colorLibrary from '../colorLibrary.js'
+export default {
+  data() {
+    return {
+      colorLibrary,
+    };
+  },
+};
+</script>

@@ -6,6 +6,9 @@ import DashboardView from '../views/DashboardView.vue'
 import ProfileView from '../views/ProfileView.vue'
 import UsersView from '../views/UsersView.vue'
 import UserTransactionView from '../views/user/UserTransactionView.vue'
+import Home from '../views/Home.vue'
+import Transaksi from '../views/Transaksi.vue'
+import componentEditor from '../views/componentEditor.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +48,21 @@ const router = createRouter({
       name: 'ProfileView',
       component: ProfileView
     },
+    {
+      path: '/home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/transaksi',
+      name: 'Transaksi',
+      component: Transaksi
+    },
+    {
+      path: '/editor',
+      name: 'Component Editor',
+      component: componentEditor
+    }
   ]
 })
 
